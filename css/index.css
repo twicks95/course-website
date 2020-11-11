@@ -1,0 +1,138 @@
+@font-face {
+    font-family: "Sora";
+    src: url("../assets/fonts/Sora-Bold.ttf") format("trutype"),
+      url("../assets/fonts/Sora-ExtraBold.ttf") format("trutype"),
+      url("../assets/fonts/Sora-ExtraLight.ttf") format("trutype"),
+      url("../assets/fonts/Sora-Light.ttf") format("trutype"),
+      url("../assets/fonts/Sora-Medium.ttf") format("trutype"),
+      url("../assets/fonts/Sora-Regular.ttf") format("trutype"),
+      url("../assets/fonts/Sora-SemiBold.ttf") format("trutype"),
+      url("../assets/fonts/Thin.ttf") format("trutype");
+  }
+  
+  @font-face {
+    font-family: "Ropa";
+    src: url("../assets/fonts/RopaSans-Regular.ttf") format("truetype"),
+      url("../assets/fonts/RopaSans-Italic.ttf") format("truetype");
+  }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: Ropa, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    position: fixed;
+    width: 100vw;
+}
+
+.nav-wrapper {
+    /* border: solid 1px black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+}
+
+.brand-logo {
+    font-size: 20px;
+    color: gainsboro;
+}
+
+.nav-menu li {
+    display: inline;
+    font-size: 14px;
+}
+
+.nav-menu ul li:nth-child(2) {
+    margin: 60px;
+}
+
+/* .nav-menu li a {
+    color: gainsboro;
+} */
+
+.content-wrapper {
+    background-image: url("../assets/images/above-the-fold.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: -99;
+}
+
+.content-wrapper::after {
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to bottom, rgba(44, 44, 44, 1), rgba(0, 0, 0, 0.5));
+    position: absolute;
+}
+
+.title, .description, p, a {
+    color: gainsboro;
+    text-shadow: 0 3px 24px rgba(0, 0, 0);
+}
+
+.title {
+    font-family: Sora, sans-serif;
+    font-size: 38px;
+    margin-bottom: 20px;
+    width: 55vw;
+    text-align: center;
+}
+
+.description {
+    width: 35vw;
+    text-align: center;
+}
+
+nav, .title, .description, .btn-login-group {
+    z-index: 1;
+}
+
+.btn-login-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 60px;
+}
+
+.btn-login-group a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 100%;
+  background-color: rgb(71, 0, 151);
+  font-size: 14px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 2px;
+  transition: margin-top .5s, background-color .5s;
+}
+
+.btn-login-group a:hover {
+    margin-top: 5px;
+    background-color:  rgb(53, 0, 114);
+}
+
+.icon {
+    height: 14px;
+    width: 14px;
+    margin-right: 5px;
+}
