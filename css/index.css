@@ -1,20 +1,20 @@
 @font-face {
-    font-family: "Sora";
-    src: url("../assets/fonts/Sora-Bold.ttf") format("trutype"),
-      url("../assets/fonts/Sora-ExtraBold.ttf") format("trutype"),
-      url("../assets/fonts/Sora-ExtraLight.ttf") format("trutype"),
-      url("../assets/fonts/Sora-Light.ttf") format("trutype"),
-      url("../assets/fonts/Sora-Medium.ttf") format("trutype"),
-      url("../assets/fonts/Sora-Regular.ttf") format("trutype"),
-      url("../assets/fonts/Sora-SemiBold.ttf") format("trutype"),
-      url("../assets/fonts/Thin.ttf") format("trutype");
-  }
-  
-  @font-face {
-    font-family: "Ropa";
-    src: url("../assets/fonts/RopaSans-Regular.ttf") format("truetype"),
-      url("../assets/fonts/RopaSans-Italic.ttf") format("truetype");
-  }
+  font-family: "Sora";
+  src: url("../assets/fonts/Sora-Bold.ttf") format("trutype"),
+    url("../assets/fonts/Sora-ExtraBold.ttf") format("trutype"),
+    url("../assets/fonts/Sora-ExtraLight.ttf") format("trutype"),
+    url("../assets/fonts/Sora-Light.ttf") format("trutype"),
+    url("../assets/fonts/Sora-Medium.ttf") format("trutype"),
+    url("../assets/fonts/Sora-Regular.ttf") format("trutype"),
+    url("../assets/fonts/Sora-SemiBold.ttf") format("trutype"),
+    url("../assets/fonts/Thin.ttf") format("trutype");
+}
+
+@font-face {
+  font-family: "Ropa";
+  src: url("../assets/fonts/RopaSans-Regular.ttf") format("truetype"),
+    url("../assets/fonts/RopaSans-Italic.ttf") format("truetype");
+}
 
 * {
   box-sizing: border-box;
@@ -23,38 +23,39 @@
 }
 
 body {
-    font-family: Ropa, sans-serif;
+  font-family: Ropa, sans-serif;
+  position: relative;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 nav {
-    position: fixed;
-    width: 100vw;
+  position: fixed;
+  width: 100vw;
 }
 
 .nav-wrapper {
-    /* border: solid 1px black; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 80px;
+  /* border: solid 1px black; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
 }
 
 .brand-logo {
-    font-size: 20px;
-    color: gainsboro;
+  font-size: 20px;
+  color: gainsboro;
 }
 
 .nav-menu li {
-    display: inline;
-    font-size: 14px;
+  display: inline;
+  font-size: 14px;
 }
 
 .nav-menu ul li:nth-child(2) {
-    margin: 60px;
+  margin: 60px;
 }
 
 /* .nav-menu li a {
@@ -62,45 +63,59 @@ nav {
 } */
 
 .content-wrapper {
-    background-image: url("../assets/images/above-the-fold.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: -99;
+  background-image: url("../assets/images/home-image-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: -99;
 }
 
 .content-wrapper::after {
-    content: "";
-    height: 100vh;
-    width: 100vw;
-    background-image: linear-gradient(to bottom, rgba(44, 44, 44, 1), rgba(0, 0, 0, 0.5));
-    position: absolute;
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(44, 44, 44, 1),
+    rgba(0, 0, 0, 0.5)
+  );
+  position: absolute;
 }
 
-.title, .description, p, a {
-    color: gainsboro;
-    text-shadow: 0 3px 24px rgba(0, 0, 0);
+.title,
+.description,
+p,
+a {
+  color: gainsboro;
+  text-shadow: 0 3px 24px rgba(0, 0, 0);
 }
 
 .title {
-    font-family: Sora, sans-serif;
-    font-size: 38px;
-    margin-bottom: 20px;
-    width: 55vw;
-    text-align: center;
+  font-family: Sora, sans-serif;
+  font-size: 38px;
+  margin-bottom: 20px;
+  width: 55vw;
+  text-align: center;
 }
 
 .description {
-    width: 35vw;
-    text-align: center;
+  width: 35vw;
+  text-align: center;
 }
 
-nav, .title, .description, .btn-login-group {
-    z-index: 1;
+nav,
+.title,
+.description,
+.btn-login-group {
+  z-index: 1;
+}
+
+.nav-menu a, .description, .btn-login-group p , .btn-login-group a {
+    letter-spacing: 1px;
 }
 
 .btn-login-group {
@@ -123,16 +138,86 @@ nav, .title, .description, .btn-login-group {
   text-align: center;
   line-height: 35px;
   border-radius: 2px;
-  transition: margin-top .5s, background-color .5s;
+  transition: margin-top 0.5s, background-color 0.5s;
 }
 
 .btn-login-group a:hover {
-    margin-top: 5px;
-    background-color:  rgb(53, 0, 114);
+  margin-top: 5px;
+  background-color: rgb(53, 0, 114);
 }
 
 .icon {
-    height: 14px;
-    width: 14px;
-    margin-right: 5px;
+  height: 14px;
+  width: 14px;
+  margin-right: 5px;
+}
+
+#login-panel {
+  display: none;
+}
+
+.login-wrapper {
+  border: solid 1px white;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.login-background {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(71, 0, 151),
+    rgb(51, 0, 109)
+  );
+  padding: 80px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-background h3 {
+  font-family: Sora, sans-serif;
+  color: gainsboro;
+  letter-spacing: 2px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.login-form label {
+  margin-bottom: 5px;
+}
+
+.login-form label,
+button {
+  display: block;
+}
+
+.login-form input,
+button {
+  height: 35px;
+  width: 100%;
+  border: none;
+  border-radius: 2px;
+}
+
+.login-form input {
+  padding: 0 20px;
+  font-family: Ropa, sans-serif;
+}
+
+.login-form button {
+  cursor: pointer;
 }

@@ -43,6 +43,25 @@ require "functions.php";
         </div>
     </div>
 
+    <div id="login-panel">
+        <div class="login-wrapper">
+            <div class="login-background">
+                <h3>User Login</h3>
+                <form class="login-form" action="" method="POST">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" placeholder="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="password">
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
         feather.replace()
