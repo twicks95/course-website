@@ -49,14 +49,18 @@ require "functions.php";
                 <h3>User Login</h3>
                 <form class="login-form" action="" method="POST">
                     <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" name="username" id="username" placeholder="username">
+                        <label class="lb-username" for="username">Username</label>
+                        <input class="username" type="text" name="username" id="username">
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password" placeholder="password">
+                        <label class="lb-password" for="password">Password</label>
+                        <input class="password" type="password" name="password" id="password">
                     </div>
-                    <button type="submit">Login</button>
+                    <div class="remember-me-group">
+                        <input class="chbox-remember" type="checkbox" name="remember" id="remember">
+                        <label class="lb-remember" for="remember">Remember me</label>
+                    </div>
+                    <button type="submit"><i class="icon" data-feather="log-in"></i>Login</button>
                 </form>
             </div>
         </div>
